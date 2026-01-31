@@ -14,6 +14,35 @@ const Portfolio = () => {
     },
   ];
 
+  // Data Mitra sesuai rekam jejak PSU
+  const partners = [
+    {
+      name: "Perumda Pasar Juara Bandung",
+      detail: "Pasar Sederhana",
+      icon: "storefront",
+    },
+    {
+      name: "GOR Gotong Royong",
+      detail: "Kabupaten Subang",
+      icon: "sports_kabaddi",
+    },
+    {
+      name: "Lapang Bintang",
+      detail: "Kabupaten Subang",
+      icon: "stadium",
+    },
+    {
+      name: "Yayasan Pendidikan Islam",
+      detail: "Al Azhar Bekasi",
+      icon: "stadium",
+    },
+    {
+      name: "Masjid Al Jabbar",
+      detail: "Bandung",
+      icon: "stadium",
+    },
+  ];
+
   return (
     <div className="bg-white">
       {/* Hero Section */}
@@ -68,7 +97,41 @@ const Portfolio = () => {
             ))}
           </div>
         </section>
-        {/* SECTION BARU: Video Portrait Dokumentasi */}
+
+        {/* SECTION BARU: Mitra Kerjasama */}
+        <section className="mb-24">
+          <div className="flex items-center gap-4 mb-10">
+            <h2 className="text-slate-900 text-3xl md:text-4xl font-black">
+              Mitra Kerjasama
+            </h2>
+            <div className="h-1 flex-grow bg-slate-100 rounded-full"></div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {partners.map((partner, idx) => (
+              <div
+                key={idx}
+                className="flex items-center gap-5 p-6 rounded-3xl bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-xl hover:border-primary transition-all duration-300 group"
+              >
+                <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center shadow-sm group-hover:bg-primary group-hover:text-white transition-all">
+                  <span className="material-symbols-outlined text-3xl">
+                    {partner.icon}
+                  </span>
+                </div>
+                <div>
+                  <h4 className="font-black text-slate-900 text-lg leading-tight">
+                    {partner.name}
+                  </h4>
+                  <p className="text-slate-500 text-sm font-bold mt-1">
+                    {partner.detail}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Video Portrait Dokumentasi */}
         <section className="mb-24">
           <div className="flex items-center gap-4 mb-10">
             <h2 className="text-slate-900 text-3xl md:text-4xl font-black">
@@ -113,7 +176,6 @@ const Portfolio = () => {
               </ul>
             </div>
 
-            {/* Video Container Portrait */}
             <div className="flex justify-center">
               <div className="relative w-full max-w-[320px] aspect-[9/16] rounded-[3rem] overflow-hidden shadow-2xl border-[8px] border-slate-900 bg-slate-900">
                 <video

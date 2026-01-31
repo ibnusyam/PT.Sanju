@@ -1,19 +1,16 @@
 const Services = () => {
   return (
     <>
-      {/* Hero Section - Light Overlay */}
+      {/* Hero Section - Tetap sama */}
       <div className="@container">
         <div
           className="relative w-full min-h-[480px] flex flex-col justify-center items-center bg-no-repeat bg-center p-8 text-center"
           style={{
-            // Overlay gradien hitam agar teks putih tetap terbaca tajam
             backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%), url('/images/ofice.jpg')`,
-            // Menggunakan 100% 100% agar gambar dipaksa masuk ke bingkai tanpa terpotong
             backgroundSize: "100% 100%",
           }}
         >
           <div className="relative z-10 flex flex-col gap-4 max-w-[800px]">
-            {/* Teks diubah menjadi putih agar terlihat jelas di atas gambar yang tajam */}
             <h1 className="text-white text-4xl md:text-6xl font-black leading-tight tracking-[-0.033em] drop-shadow-lg">
               Layanan Kami
             </h1>
@@ -26,7 +23,7 @@ const Services = () => {
       </div>
 
       <div className="layout-container flex h-full grow flex-col max-w-[1280px] mx-auto w-full">
-        {/* Parkir Sistem Section - White BG */}
+        {/* Parkir Sistem Section - Tetap sama */}
         <div className="px-4 md:px-10 py-16 border-b border-slate-100 bg-white">
           <div className="flex flex-col lg:flex-row gap-12 items-center">
             <div className="flex flex-col gap-6 flex-1">
@@ -62,7 +59,7 @@ const Services = () => {
           </div>
         </div>
 
-        {/* Jual Alat Section - Soft Light BG */}
+        {/* Jual Alat Section - SEKARANG MENGGUNAKAN GAMBAR */}
         <div className="px-4 md:px-10 py-16 bg-slate-50">
           <div className="flex flex-col items-center text-center mb-12">
             <h2 className="text-slate-900 text-3xl md:text-4xl font-black max-w-[720px]">
@@ -77,41 +74,47 @@ const Services = () => {
             {[
               {
                 title: "Barrier Gate",
-                icon: "add_road",
+                img: "/images/barier-gate.jpeg",
                 desc: "Palang parkir otomatis kualitas tinggi.",
               },
               {
                 title: "Pos & Komputer",
-                icon: "computer",
+                img: "/images/komputer.jpeg",
                 desc: "Perangkat keras untuk operasional di pos.",
               },
               {
                 title: "CCTV & LPR",
-                icon: "videocam",
+                img: "/images/cctv.jpg",
                 desc: "Kamera pemantau dan pengenal plat nomor.",
               },
             ].map((alat, idx) => (
               <div
                 key={idx}
-                className="group flex flex-col rounded-2xl bg-white border border-slate-200 p-8 hover:shadow-xl transition-all duration-300"
+                className="group flex flex-col rounded-3xl bg-white border border-slate-200 overflow-hidden hover:shadow-2xl transition-all duration-300"
               >
-                <div className="w-16 h-16 rounded-xl bg-blue-50 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
-                  <span className="material-symbols-outlined text-4xl text-primary group-hover:text-white">
-                    {alat.icon}
-                  </span>
+                {/* Bagian Gambar Alat - Diubah agar FIT */}
+                <div className="aspect-video w-full overflow-hidden bg-white p-4">
+                  <img
+                    src={alat.img}
+                    alt={alat.title}
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                  />
                 </div>
-                <h3 className="text-xl font-bold mb-2 text-slate-900">
-                  {alat.title}
-                </h3>
-                <p className="text-sm text-slate-500 font-medium leading-relaxed">
-                  {alat.desc}
-                </p>
+                {/* Bagian Teks */}
+                <div className="p-8 border-t border-slate-50">
+                  <h3 className="text-xl font-bold mb-2 text-slate-900">
+                    {alat.title}
+                  </h3>
+                  <p className="text-sm text-slate-500 font-medium leading-relaxed">
+                    {alat.desc}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Pengelolaan & SDM Section */}
+        {/* Pengelolaan & SDM Section - Tetap sama */}
         <div className="px-4 md:px-10 py-24 bg-white">
           <div className="flex flex-col-reverse md:flex-row gap-12 items-center">
             <div className="w-full md:w-1/2">
