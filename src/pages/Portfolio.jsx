@@ -153,7 +153,7 @@ const Portfolio = () => {
                     NIB Berbasis Risiko
                   </h3>
                   <p className="text-sm font-bold text-primary mt-1">
-                    Nomor: 0896-0470-0013
+                    Nomor: 0703220059196
                   </p>
                 </div>
               </div>
@@ -175,7 +175,7 @@ const Portfolio = () => {
                     NPWP Perusahaan
                   </h3>
                   <p className="text-sm font-bold text-primary mt-1">
-                    0635.8764.3642.000
+                    0635.8764.3642.1000
                   </p>
                 </div>
               </div>
