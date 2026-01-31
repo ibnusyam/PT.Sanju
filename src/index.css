@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap");
+
+/* Cukup gunakan ini untuk Tailwind v4 */
+@import "tailwindcss";
+
+/* Jika Anda punya custom theme warna seperti 'primary' tadi, 
+   di v4 Anda bisa langsung menaruhnya di sini menggunakan CSS Variables */
+@theme {
+  --color-primary: #137fec;
+  --color-background-light: #f6f7f8;
+  /* --color-background-dark: #101922; Ini yang membuat hitam */
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+}
