@@ -6,7 +6,7 @@ const Services = () => {
         <div
           className="relative w-full min-h-[480px] flex flex-col justify-center items-center bg-no-repeat bg-center p-8 text-center"
           style={{
-            backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%), url('/images/ofice.jpg')`,
+            backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%), url('/images/pelayanan.jpg')`,
             backgroundSize: "100% 100%",
           }}
         >

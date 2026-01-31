@@ -132,12 +132,17 @@ const Partnership = () => {
               </div>
               <div className="lg:w-1/2 flex justify-center">
                 <div className="relative">
-                  <div className="w-64 h-64 md:w-80 md:h-80 bg-blue-100 rounded-full flex items-center justify-center animate-pulse">
-                    <span className="material-symbols-outlined text-primary text-[100px] md:text-[150px]">
-                      shield_with_heart
-                    </span>
+                  {/* Container Bulat dengan Gambar Lokal */}
+                  <div className="w-64 h-64 md:w-80 md:h-80 bg-blue-50 rounded-full flex items-center justify-center overflow-hidden border-8 border-white shadow-inner">
+                    <img
+                      src="/images/asuransi.jpeg"
+                      alt="Proteksi Asuransi PSU"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  <div className="absolute -top-4 -right-4 bg-white p-6 rounded-2xl shadow-xl border border-slate-100 max-w-[200px]">
+
+                  {/* Label Floating Tag */}
+                  <div className="absolute -top-4 -right-4 bg-white p-6 rounded-2xl shadow-xl border border-slate-100 max-w-[200px] z-10">
                     <p className="text-xs font-black text-slate-400 uppercase tracking-widest mb-1">
                       Proteksi
                     </p>
